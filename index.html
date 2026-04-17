@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hi</title>
+    <meta name="description" content="Ishan Saxena — personal site." />
+    <style>
+      :root {
+        --bg: #0b0d10;
+        --fg: #e8e6e3;
+        --muted: #8a8f98;
+        --accent: #7aa2f7;
+        --rule: rgba(255, 255, 255, 0.08);
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #fafaf7;
+          --fg: #1a1a1a;
+          --muted: #6b7280;
+          --accent: #3b5bdb;
+          --rule: rgba(0, 0, 0, 0.08);
+        }
+      }
+
+      * { box-sizing: border-box; }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: ui-serif, Georgia, "Times New Roman", serif;
+        font-size: 18px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+      }
+
+      main {
+        width: 100%;
+        max-width: 36rem;
+      }
+
+      .mono {
+        font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+        font-size: 0.82rem;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-weight: 500;
+        font-size: clamp(2rem, 5vw, 2.75rem);
+        margin: 0.5rem 0 0.25rem;
+        letter-spacing: -0.01em;
+      }
+
+      .tagline {
+        color: var(--muted);
+        margin: 0 0 2rem;
+        font-style: italic;
+      }
+
+      hr {
+        border: 0;
+        border-top: 1px solid var(--rule);
+        margin: 2rem 0;
+      }
+
+      p { margin: 0 0 1rem; }
+
+      footer {
+        margin-top: 2rem;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      .cursor {
+        display: inline-block;
+        width: 0.5ch;
+        background: var(--accent);
+        animation: blink 1s steps(2, start) infinite;
+        margin-left: 2px;
+      }
+      @keyframes blink { to { visibility: hidden; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Ishan Saxena<span class="cursor">&nbsp;</span></h1>
+      <p class="tagline">Something new is going up here.</p>
+
+      <hr />
+
+      <footer>
+        <span class="mono">Last updated 2026-04-17</span>
+      </footer>
+    </main>
+  </body>
+</html>
